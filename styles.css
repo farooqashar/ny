@@ -61,12 +61,13 @@ nav h1 {
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23003d82" width="1200" height="600"/><text x="50%" y="50%" font-size="120" fill="%23ffd700" text-anchor="middle" font-family="Arial" font-weight="bold">NYC</text></svg>');
     background-size: cover;
     background-position: center;
-    height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 2rem 0;
 }
 
 .hero-content h2 {
@@ -78,6 +79,30 @@ nav h1 {
 .hero-content p {
     font-size: 1.5rem;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    margin-bottom: 2rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    font-size: 1rem;
+    margin: 0;
 }
 
 /* Attractions Section */
@@ -120,6 +145,128 @@ nav h1 {
 
 .attraction-card p {
     color: #666;
+    line-height: 1.6;
+}
+
+.card-details {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    flex-wrap: wrap;
+}
+
+.card-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Boroughs Section */
+.boroughs {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.boroughs h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.borough-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.borough-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid #003d82;
+}
+
+.borough-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.borough-card h3 {
+    color: #003d82;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.borough-card p {
+    color: #555;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.borough-card .highlights {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Culture Section */
+.culture {
+    padding: 4rem 0;
+    background-color: #f4f4f4;
+}
+
+.culture h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.culture-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.culture-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.culture-item h3 {
+    color: #003d82;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.culture-item p {
+    color: #666;
+    line-height: 1.7;
 }
 
 /* About Section */
@@ -131,18 +278,51 @@ nav h1 {
 .about h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: #1a1a1a;
 }
 
-.about p {
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text p {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
     color: #555;
+}
+
+.quick-facts {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+.quick-facts h3 {
+    color: #003d82;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.quick-facts ul {
+    list-style: none;
+}
+
+.quick-facts li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #dee2e6;
+    color: #555;
+    font-size: 1rem;
+}
+
+.quick-facts li:last-child {
+    border-bottom: none;
 }
 
 /* Footer */
@@ -161,6 +341,12 @@ footer {
         gap: 1rem;
     }
 
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
     .hero-content h2 {
         font-size: 2rem;
     }
@@ -169,7 +355,28 @@ footer {
         font-size: 1.2rem;
     }
 
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    .stat h3 {
+        font-size: 2rem;
+    }
+
     .attraction-grid {
         grid-template-columns: 1fr;
+    }
+
+    .borough-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
